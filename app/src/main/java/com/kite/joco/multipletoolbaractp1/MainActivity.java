@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -88,5 +89,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     public boolean onQueryTextChange(String s) {
         return false;
+    }
+
+    public void onClick(View v) {
+        Intent secondIntent = new Intent(this,SecondSearch.class);
+        startActivity(secondIntent);
     }
 }
